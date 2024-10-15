@@ -1,0 +1,27 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.10
+Date: 2024-1-12
+  Changes:
+    - Changed recipe order, should now be right behing vanilla wagon and fluid wagon... again
+---------------------------------------------------------------------------------------------------
+Version: 0.0.9
+Date: 2023-5-23
+  Changes:
+    - Changed recipe order, should now be right behing vanilla wagon and fluid wagon
+---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+Date: 2023-5-17
+  Changes:
+    - Merged DoubleCargoWagon, and BigFluidWagon into DoubleWagons
+  Features:
+    - Added config option to make base game cargo wagon mask white instead of brown 
+---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 2020-11-30
+  Info:
+    - Support for Factorio 1.0
+---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 2020-11-30
+  Info:
+    - Support for Factorio 1.0

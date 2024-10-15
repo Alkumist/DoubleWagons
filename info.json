@@ -1,0 +1,9 @@
+{
+  "name": "DoubleWagons",
+  "version": "0.0.10",
+  "factorio_version": "1.1",
+  "title": "Black Wagons",
+  "author": "DellAquila, kuxynator, Alkumist",
+  "dependencies": ["base >= 1.1"],
+  "description": "Use the new Black Wagons that gives you double the space."
+}
