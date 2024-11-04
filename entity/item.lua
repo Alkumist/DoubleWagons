@@ -7,7 +7,7 @@ data:extend{
     icon_size = 64,
    -- flags = {"goes-to-quickbar"},
     subgroup = "train-transport",
-    order = "a[train-system]-gb[cargo-wagon]",
+    order = "c[rolling-stock]-bb[cargo-wagon]",
     place_result = "black-cargo-wagon",
     stack_size = 5
   },
@@ -19,7 +19,7 @@ data:extend{
     icon_size = 64,
    -- flags = {"goes-to-quickbar"},
     subgroup = "train-transport",
-    order = "a[train-system]-hb[fluid-wagon]",
+    order = "c[rolling-stock]-cc[fluid-wagon]",
     place_result = "black-fluid-wagon",
     stack_size = 5
   },

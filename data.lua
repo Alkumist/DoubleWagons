@@ -1,3 +1,4 @@
+require("graphics.remnants.remnants")
 require("entity.entities")
 require("entity.item")
 require("entity.technology")
