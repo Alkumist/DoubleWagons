@@ -1,4 +1,5 @@
 require("util")
+local meld = require("__core__.lualib.meld")
 --New Cargo Wagon
 local bcwagon = util.table.deepcopy(data.raw["cargo-wagon"]["cargo-wagon"])
   bcwagon.name = "black-cargo-wagon"
@@ -53,7 +54,7 @@ local bcwagon = util.table.deepcopy(data.raw["cargo-wagon"]["cargo-wagon"])
       }
     )
   }
-
+--New Fluid Wagon
 local bfwagon = util.table.deepcopy(data.raw["fluid-wagon"]["fluid-wagon"])
   bfwagon.name = "black-fluid-wagon"
   bfwagon.icon = "__DoubleWagons__/graphics/icons/fluid-wagon.png"
@@ -94,3 +95,6 @@ data:extend({
   bcwagon,
   bfwagon
 })
+if mods["elevated-rails"] then
+  require("__DoubleWagons__.entity.sloped-trains-updates").apply_all_base()
+end
