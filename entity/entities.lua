@@ -1,5 +1,4 @@
 require("util")
-local meld = require("__core__.lualib.meld")
 --New Cargo Wagon
 local bcwagon = util.table.deepcopy(data.raw["cargo-wagon"]["cargo-wagon"])
   bcwagon.name = "black-cargo-wagon"
@@ -90,11 +89,59 @@ local bfwagon = util.table.deepcopy(data.raw["fluid-wagon"]["fluid-wagon"])
       }
     )
   }
-
+  --elevated rails
+if mods["elevated-rails"] then
+  --black cargo wagon
+  bcwagon.pictures.slope_angle_between_frames = 1.25
+  bcwagon.pictures.slope_back_equals_front = true
+  bcwagon.pictures.sloped.layers = {
+    util.sprite_load("__DoubleWagons__/graphics/elevated-rails/cargo-wagon/cargo-wagon-sloped",
+      {
+        dice = 4,
+        priority = "very-low",
+        back_equals_front = true,
+        direction_count = 80,
+        scale = 0.5,
+        usage = "train"
+      }
+    ),
+    util.sprite_load("__elevated-rails__/graphics/entity/cargo-wagon/cargo-wagon-sloped-shadow",
+      {
+        dice = 4,
+        priority = "very-low",
+        draw_as_shadow = true,
+        direction_count = 80,
+        scale = 0.5,
+        usage = "train"
+      }
+    )
+  }
+  --black fluid wagon
+  bfwagon.pictures.slope_angle_between_frames = 1.25
+  bfwagon.pictures.slope_back_equals_front = true
+  bfwagon.pictures.sloped.layers = {
+    util.sprite_load("__DoubleWagons__/graphics/elevated-rails/fluid-wagon/fluid-wagon-sloped",
+      {
+        dice = 4,
+        priority = "very-low",
+        direction_count = 80,
+        scale = 0.5,
+        usage = "train"
+      }
+    ),
+    util.sprite_load("__elevated-rails__/graphics/entity/fluid-wagon/fluid-wagon-sloped-shadow",
+      {
+        dice = 4,
+        priority = "very-low",
+        draw_as_shadow = true,
+        direction_count = 80,
+        scale = 0.5,
+        usage = "train"
+      }
+    )
+  }
+end
 data:extend({
   bcwagon,
   bfwagon
 })
-if mods["elevated-rails"] then
-  require("__DoubleWagons__.entity.sloped-trains-updates").apply_all_base()
-end
