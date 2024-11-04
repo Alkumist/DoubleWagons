@@ -1,6 +1,75 @@
-data:extend(
-{
---Cargo Wagon
+--New Cargo Wagon
+local bcwagon = util.deepcopy(data.raw["cargo-wagon"])
+  bcwagon.name = "black-cargo-wagon"
+  bcwagon.icon = "__DoubleWagons__/graphics/icons/cargo-wagon.png"
+  bcwagon.inventory_size = 80
+  bcwagon.minable.mining_time = 1
+  bcwagon.minable.result = "black-cargo-wagon"
+  bcwagon.max_health = 800
+  bcwagon.minimap_representation = "__DoubleWagons__/graphics/cargo-wagon/minimap-representation/cargo-wagon-minimap-representation.png"
+  bcwagon.selected_minimap_representation = "__DoubleWagons__/graphics/cargo-wagon/minimap-representation/cargo-wagon-selected-minimap-representation.png"
+  bcwagon.corpse = "__DoubleWagons__/graphics/cargo-wagon/remnants/black-cargo-wagon-remnants.png"
+  bcwagon.pictures.rotated.layers ={
+    util.sprite_load("__DoubleWagons__/graphics/cargo-wagon/cargo-wagon",
+      {
+        dice = 4,
+        priority = "very-low",
+        allow_low_quality_rotation = true,
+        back_equals_front = true,
+        direction_count = 128,
+        scale = 0.5,
+        usage = "train"
+      }
+    )
+  }
+  bcwagon.horizontal_doors.layers = {
+    util.sprite_load("__base__/graphics/cargo-wagon/cargo-wagon-door-horizontal",
+      {
+        frame_count = 8,
+        scale = 0.5,
+        usage = "train"
+      }
+    )
+  }
+  bcwagon.vertical_doors.layers = {
+    util.sprite_load("__base__/graphics/cargo-wagon/cargo-wagon-door-vertical",
+      {
+        frame_count = 8,
+        scale = 0.5,
+        usage = "train"
+      }
+    )
+  }
+
+local bfwagon = util.deepcopy(data.raw["fluid-wagon"])
+  bfwagon.name = "black-fluid-wagon"
+  bfwagon.icon = "__DoubleWagons__/graphics/icons/fluid-wagon.png"
+  bfwagon.capacity = 75000
+  bfwagon.minable.mining_time = 1
+  bfwagon.minable.result = "black-fluid-wagon"
+  bfwagon.max_health = 800
+  bfwagon.minimap_representation = "__DoubleWagons__/graphics/fluid-wagon/minimap-representation/fluid-wagon-minimap-representation.png"
+  bfwagon.selected_minimap_representation = "__DoubleWagons__/graphics/fluid-wagon/minimap-representation/fluid-wagon-selected-minimap-representation.png"
+  bfwagon.corpse = "__DoubleWagons__/graphics/fluid-wagon/remnants/black-fluid-wagon-remnants.png"
+  bfwagon.pictures.rotated.layers = {
+    util.sprite_load("__DoubleWagons__/graphics/fluid-wagon/fluid-wagon",
+      {
+        dice = 4,
+        priority = "very-low",
+        allow_low_quality_rotation = true,
+        back_equals_front = true,
+        direction_count = 128,
+        scale = 0.5,
+        usage = "train"
+      }
+    )
+  }
+
+data:extend({
+bcwagon,
+bfwagon
+  
+--[[Cargo Wagon
   {
     type = "cargo-wagon",
     name = "black-cargo-wagon",
@@ -590,5 +659,5 @@ data:extend(
     crash_trigger = crash_trigger(),
     sound_minimum_speed = 0.5;
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 }
-  },
+  },--]]
 })
