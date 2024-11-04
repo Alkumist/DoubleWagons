@@ -3,6 +3,7 @@ Version: 1.0.0
 Date: 2024-11-4
   Info:
     - Support for Factorio 2.0
+  Features:
     - Support for Elevated Rails
   Changes:
     - Retinted all Wagons for standard colorizing
