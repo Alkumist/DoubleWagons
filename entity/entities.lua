@@ -1,15 +1,16 @@
+require("util")
 --New Cargo Wagon
-local bcwagon = util.deepcopy(data.raw["cargo-wagon"])
+local bcwagon = util.table.deepcopy(data.raw["cargo-wagon"]["cargo-wagon"])
   bcwagon.name = "black-cargo-wagon"
   bcwagon.icon = "__DoubleWagons__/graphics/icons/cargo-wagon.png"
   bcwagon.inventory_size = 80
   bcwagon.minable.mining_time = 1
   bcwagon.minable.result = "black-cargo-wagon"
   bcwagon.max_health = 800
-  bcwagon.minimap_representation = "__DoubleWagons__/graphics/cargo-wagon/minimap-representation/cargo-wagon-minimap-representation.png"
-  bcwagon.selected_minimap_representation = "__DoubleWagons__/graphics/cargo-wagon/minimap-representation/cargo-wagon-selected-minimap-representation.png"
-  bcwagon.corpse = "__DoubleWagons__/graphics/cargo-wagon/remnants/black-cargo-wagon-remnants.png"
-  bcwagon.pictures.rotated.layers ={
+  --bcwagon.minimap_representation = "__DoubleWagons__/graphics/cargo-wagon/minimap-representation/cargo-wagon-minimap-representation.png"
+  --bcwagon.selected_minimap_representation = "__DoubleWagons__/graphics/cargo-wagon/minimap-representation/cargo-wagon-selected-minimap-representation.png"
+  --bcwagon.corpse = "__DoubleWagons__/graphics/cargo-wagon/remnants/black-cargo-wagon-remnants.png"
+  bcwagon.pictures.rotated.layers = {
     util.sprite_load("__DoubleWagons__/graphics/cargo-wagon/cargo-wagon",
       {
         dice = 4,
@@ -23,7 +24,7 @@ local bcwagon = util.deepcopy(data.raw["cargo-wagon"])
     )
   }
   bcwagon.horizontal_doors.layers = {
-    util.sprite_load("__base__/graphics/cargo-wagon/cargo-wagon-door-horizontal",
+    util.sprite_load("__DoubleWagons__/graphics/cargo-wagon/cargo-wagon-door-horizontal",
       {
         frame_count = 8,
         scale = 0.5,
@@ -32,7 +33,7 @@ local bcwagon = util.deepcopy(data.raw["cargo-wagon"])
     )
   }
   bcwagon.vertical_doors.layers = {
-    util.sprite_load("__base__/graphics/cargo-wagon/cargo-wagon-door-vertical",
+    util.sprite_load("__DoubleWagons__/graphics/cargo-wagon/cargo-wagon-door-vertical",
       {
         frame_count = 8,
         scale = 0.5,
@@ -41,16 +42,16 @@ local bcwagon = util.deepcopy(data.raw["cargo-wagon"])
     )
   }
 
-local bfwagon = util.deepcopy(data.raw["fluid-wagon"])
+local bfwagon = util.table.deepcopy(data.raw["fluid-wagon"]["fluid-wagon"])
   bfwagon.name = "black-fluid-wagon"
   bfwagon.icon = "__DoubleWagons__/graphics/icons/fluid-wagon.png"
   bfwagon.capacity = 75000
   bfwagon.minable.mining_time = 1
   bfwagon.minable.result = "black-fluid-wagon"
   bfwagon.max_health = 800
-  bfwagon.minimap_representation = "__DoubleWagons__/graphics/fluid-wagon/minimap-representation/fluid-wagon-minimap-representation.png"
-  bfwagon.selected_minimap_representation = "__DoubleWagons__/graphics/fluid-wagon/minimap-representation/fluid-wagon-selected-minimap-representation.png"
-  bfwagon.corpse = "__DoubleWagons__/graphics/fluid-wagon/remnants/black-fluid-wagon-remnants.png"
+  --bfwagon.minimap_representation = "__DoubleWagons__/graphics/fluid-wagon/minimap-representation/fluid-wagon-minimap-representation.png"
+  --bfwagon.selected_minimap_representation = "__DoubleWagons__/graphics/fluid-wagon/minimap-representation/fluid-wagon-selected-minimap-representation.png"
+  --bfwagon.corpse = "__DoubleWagons__/graphics/fluid-wagon/remnants/black-fluid-wagon-remnants.png"
   bfwagon.pictures.rotated.layers = {
     util.sprite_load("__DoubleWagons__/graphics/fluid-wagon/fluid-wagon",
       {
